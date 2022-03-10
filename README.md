@@ -2,7 +2,7 @@
 
 ---
 
-一个基于vue3生态系统的后台方案. 体验地址: [vue3-qyu-admin](#)
+一个基于vue3生态系统的后台方案. 体验地址: [vue3-qyu-admin](#https://qing1023.github.io/vue3-qyu-admin/)
 
 ## 技术栈(Technology Stack)
 
