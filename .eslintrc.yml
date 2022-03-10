@@ -1,0 +1,37 @@
+# 指定代码的运行环境(不互斥), 提供预定义的全局变量(predefined global variables)
+env:
+  browser: true
+  es2021: true
+  node: true
+
+# 引入其他插件: 插件中可定义新的规则, 环境, 配置
+plugins:
+  - vue
+
+# 引入其他配置文件
+extends:
+  - eslint:recommended
+  - plugin:vue/vue3-recommended
+  - prettier
+
+parser: vue-eslint-parser
+
+parserOptions:
+  ecmaVersion: latest
+  sourceType: module
+  ecmaFeatures:
+    jsx: true # 使eslint可以检查.jsx文件
+
+# 启用/关闭某个规则, 定义其错误等级
+rules:
+  vue/multi-word-component-names:
+    - error
+    - ignores: ["index", "401", "404"]
+
+# 定义全局变量, 值可以为writable/readonly
+globals:
+  defineProps: readonly
+  defineEmits: readonly
+  defineExpose: readonly
+  withDefaults: readonly
+  # ElMessage: readonly # 自动导入element-plus组件
