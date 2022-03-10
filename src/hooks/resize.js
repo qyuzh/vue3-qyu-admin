@@ -18,7 +18,6 @@ export default function () {
 
   const sidebarResizeHandler = () => {
     setTimeout(() => {
-      console.log('run time once')
       chartResizeHandler()
     }, 500)
   }

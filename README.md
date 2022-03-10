@@ -46,6 +46,7 @@ vue-i18n, svg-icon(vite-plugin-svg-icons)
 
 ```
 
+
 ## 项目初始化
 
 创建vite2 + vue3 + js的项目
