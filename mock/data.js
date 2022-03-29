@@ -93,6 +93,27 @@ const res = [
       }
     },
   },
+  {
+    url: baseURL + '/user/userlist',
+    method: 'get',
+    response: () => {
+      return {
+        code: 2000,
+        userList: [
+          '张三',
+          '张三1',
+          '张三2',
+          '张三3',
+          '张三4',
+          '李四',
+          '李四1',
+          '李四2',
+          '李四3',
+          '李四4',
+        ],
+      }
+    },
+  },
 ]
 
 export default res

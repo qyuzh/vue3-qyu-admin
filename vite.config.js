@@ -10,7 +10,7 @@ import path from 'path'
 
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
-// import vueI18n from '@intlify/vite-plugin-vue-i18n'
+import vueI18n from '@intlify/vite-plugin-vue-i18n'
 
 import vueJs from '@vitejs/plugin-vue-jsx'
 
@@ -37,13 +37,13 @@ export default defineConfig(({ command }) => {
         // 指定symbolId格式
         symbolId: 'icon-[dir]-[name]',
       }),
-      // vueI18n({
-      //   defaultSFCLang: 'yml',
-      //   compositionOnly: false,
+      vueI18n({
+        // defaultSFCLang: 'yml',
+        compositionOnly: false,
 
-      //   // you need to set i18n resource including paths !
-      //   include: path.resolve(__dirname, '@/lang/locales/**'),
-      // }),
+        // you need to set i18n resource including paths !
+        // include: path.resolve(__dirname, '@/lang/locales/**'),
+      }),
       viteMockServe({
         mockPath: 'mock',
         localEnabled: command === 'serve',

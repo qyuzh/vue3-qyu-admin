@@ -65,6 +65,7 @@ export default {
     profile: 'Profile',
     resume: 'Resume',
     todolist: 'Todo List',
+    video: 'Video',
   },
   navbar: {
     dashboard: 'Dashboard',

@@ -9,7 +9,7 @@
       label-position="left"
     >
       <div class="title-container">
-        <h3 class="title">{{ $t('login.title') }}</h3>
+        <h3 class="title">{{ t('login.title') }}</h3>
         <lang-select class="set-language" />
       </div>
 
@@ -21,7 +21,7 @@
         <el-input
           ref="usernameRef"
           v-model="loginForm.username"
-          :placeholder="$t('login.username')"
+          :placeholder="t('login.username')"
           name="username"
           type="text"
           tabindex="1"
@@ -37,7 +37,7 @@
           ref="pwdRef"
           v-model="loginForm.password"
           :type="pwdType"
-          :placeholder="$t('login.password')"
+          :placeholder="t('login.password')"
           name="password"
           tabindex="2"
           autocomplete="on"
@@ -55,37 +55,26 @@
         style="width: 100%; margin-bottom: 30px"
         @click.prevent="handleLogin"
       >
-        {{ $t('login.logIn') }}
+        {{ t('login.logIn') }}
       </el-button>
 
       <div style="position: relative">
         <div class="tips">
-          <span>{{ $t('login.username') }} : admin</span>
-          <span>{{ $t('login.password') }} : 123123</span>
+          <span>{{ t('login.username') }} : admin</span>
+          <span>{{ t('login.password') }} : 123123</span>
         </div>
         <div class="tips">
           <span style="margin-right: 18px">
-            {{ $t('login.username') }} : editor
+            {{ t('login.username') }} : editor
           </span>
-          <span>{{ $t('login.password') }} : 321321</span>
+          <span>{{ t('login.password') }} : 321321</span>
         </div>
       </div>
 
-      <div class="tips" style="text-align: right">{{ t('hello') }}</div>
+      <div class="tips" style="text-align: right">{{ t('login.hello') }}</div>
     </el-form>
   </div>
 </template>
-
-<i18n lang="yaml">
-en:
-  hello: 'hello, world!'
-zh:
-  hello: '你好, 世界!'
-es:
-  hello: 'Hallo, welt!'
-ja:
-  hello: 'こんにちは、世界!'
-</i18n>
 
 <script setup>
 import { ref, nextTick, onMounted } from 'vue'
@@ -95,7 +84,7 @@ import useUserStore from '@/store/user'
 import LangSelect from '@/lang/LangSelect.vue'
 
 import { useI18n } from 'vue-i18n'
-const { t } = useI18n({ useScope: 'local' })
+const { t } = useI18n({ useScope: 'global' })
 
 const validateUsername = (rule, value, callback) => {
   if (!validUsername(value)) {

@@ -65,6 +65,7 @@ export default {
     profile: 'プロフィール',
     resume: '履歴书',
     todolist: 'Todos',
+    video: 'ビデオ',
   },
   navbar: {
     dashboard: 'トップ',

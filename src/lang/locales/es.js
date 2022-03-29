@@ -65,6 +65,7 @@ export default {
     profile: 'Profile',
     resume: 'Lebenslauf',
     todolist: 'Todos',
+    video: 'Video',
   },
   navbar: {
     logOut: 'Salir',

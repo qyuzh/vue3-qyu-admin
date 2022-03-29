@@ -105,6 +105,19 @@ export const constantRoutes = [
       },
     ],
   },
+  {
+    path: '/video',
+    component: Layout,
+    redirect: '/video/index',
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/video/index.vue'),
+        name: 'video',
+        meta: { title: 'video', icon: 'video', noCache: true },
+      },
+    ],
+  },
   // {
   //   path: '/permission',
   //   component: Layout,

@@ -31,3 +31,10 @@ export function getPages(data) {
     data,
   })
 }
+
+export function getUserList() {
+  return request({
+    url: 'user/userlist',
+    method: 'get',
+  })
+}

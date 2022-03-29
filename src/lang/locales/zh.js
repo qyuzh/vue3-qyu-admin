@@ -65,6 +65,7 @@ export default {
     profile: '个人中心',
     resume: '个人简历',
     todolist: '待办事项',
+    video: '视频',
   },
   navbar: {
     dashboard: '首页',
