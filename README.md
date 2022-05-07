@@ -2,7 +2,7 @@
 
 ---
 
-一个基于vue3生态系统的后台方案. 体验地址: [vue3-qyu-admin](https://qing1023.github.io/vue3-qyu-admin/)
+一个基于vue3生态系统的后台方案. 体验地址: [vue3-qyu-admin](https://qyuzh.github.io/vue3-qyu-admin/)
 
 参考项目:
 + https://github.com/PanJiaChen/vue-element-admin/tree/i18n
